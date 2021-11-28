@@ -1,0 +1,69 @@
+package mod2;
+import java.util.*;
+public class Matrixmultiplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner in=new Scanner(System.in);
+    int r1,c1,r2,c2,i,j,k,sum=0,result=0;
+    System.out.println("enter the number of row1");
+    r1=in.nextInt();
+    System.out.println("enter the number of colum1");
+    c1=in.nextInt();
+    System.out.println("enter the number of rows2");
+    r2=in.nextInt();
+    System.out.println("enter the number of colum2");
+    c2=in.nextInt();
+    if(r1==c2)
+    System.out.println("enter the elements of a 1st matrix");
+    int a[][]=new int[r1][c1];//deceleration of 1st array
+    for(i=0;i<r1;i++)
+    {
+	   for(j=0;j<c1;j++)
+	   {
+		    a[i][j]= in.nextInt();
+	   }
+    }
+    int b[][]=new int[r2][c2];//deceleration of 2nd array
+    for(i=0;i<r1;i++)
+    {
+	   for(j=0;j<c1;j++)
+	   {
+		    b[i][j]= in.nextInt();
+	   }
+    }
+
+    System.out.println(" 1 st matrix");
+    for(i=0;i<r1;i++)
+    {
+	   for(j=0;j<c1;j++)
+	   {
+		   System.out.println(a[i][j]+" ");
+	   }
+	      System.out.println(" ");
+    }
+    System.out.println(" 2nd matrix");
+    for(i=0;i<r2;i++)
+    {
+	   for(j=0;j<c2;j++)
+	   {
+		   System.out.println(b[i][j]+" ");
+	   }
+	      System.out.println(" ");
+    }
+    System.out.println(" resultant matrix multiplication");
+    for(i=0;i<r1;i++)
+    {
+    	for(j=0;j<c2;j++)
+    	{
+    	for(k=0;k<c2;k++)
+    	{
+    	  result=result+a[i][k]*b[k][j];
+    	}
+    	 System.out.println( result);
+    	}
+    	
+    }
+    	
+	}
+}
