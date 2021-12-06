@@ -1,0 +1,37 @@
+package lab2;
+import java.util.*;
+class area{
+	void area(double b ,double h) {
+	double tri=(b*h)/2;
+	System.out.println("The area of the triangle is: "+tri);
+	}
+void area(int l,int h) {
+	int rect=l*h;
+	System.out.println("The area of the rectangle is: "+rect);
+}
+void area1(double r) {
+	double ra=3.14*r*r;
+	System.out.println("The area of the circle is: "+ra);
+}
+
+}
+public class Areaofshapes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		area ob=new area();
+		System.out.println("Enter the height and width of the triangle: ");
+		double he=sc.nextDouble();
+		double wd=sc.nextDouble();
+		ob.area(wd,he);
+		System.out.println("Enter the length and breadth of the rectangle: ");
+		int len=sc.nextInt();
+		int br=sc.nextInt();
+		ob.area(len,br);
+		System.out.println("Enter the radius of the circle: ");
+		double ra=sc.nextDouble();
+		ob.area1(ra);
+	}
+
+	}
