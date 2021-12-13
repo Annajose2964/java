@@ -1,0 +1,53 @@
+package lab1;
+import java.util.*;
+
+class Employee
+{
+	float salary,sal;
+	float da,har;
+	void display()
+	{
+		System.out.println("Name of the class is EMPOLYEE");
+	}
+	void calcsalary()
+	{
+		sal=salary+(da/100*salary)+(har/100*salary);
+		System.out.println("The gross salary of the employee is"+sal);
+	}
+}
+class Engineer extends Employee
+{
+	void display()
+	{
+		super.display();
+		super.calcsalary();
+		System.out.println("Name of the class is ENGINEER");
+	}
+	void calcsalary()
+	{
+		
+		System.out.println("The gross salary of the engineer is "+2*sal);
+	}
+}
+public class Inheritance
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		Engineer e= new Engineer();
+Scanner in= new Scanner(System.in);
+System.out.println("Enter the basic salary");
+ e.salary=in.nextFloat();
+System.out.println("Enter the DA of the employee");
+e.da=in.nextFloat();
+System.out.println("Enter the HAR of the employee");
+e.har=in.nextFloat();
+ 
+e.display();
+e.calcsalary();
+
+   in.close();
+	}
+
+}
